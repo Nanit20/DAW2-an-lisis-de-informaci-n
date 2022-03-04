@@ -1,0 +1,7 @@
+##Hemos ejecutado la siguiente llamada para crear lo que vendría siendo las relaciones y la base en sí:
+
+CALL apoc.import.csv(
+  [{fileName: 'file:/ventamotos.csv', labels: ['MOTOS']}],
+  [{fileName: 'file:/compraventamotos.csv', type: 'VENTA_MOTO'}],
+  {delimiter: '|', arrayDelimiter: ',', stringIds: false}
+)
